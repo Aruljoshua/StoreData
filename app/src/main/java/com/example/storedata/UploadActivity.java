@@ -131,6 +131,8 @@ public class UploadActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
+                            Intent intent = new Intent(UploadActivity.this, MainActivity.class);
+                            startActivity(intent);
                             Toast.makeText(UploadActivity.this, "Saved", Toast.LENGTH_SHORT).show();
                             finish();
                         }
